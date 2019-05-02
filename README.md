@@ -5,11 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 [![Platform](https://img.shields.io/cocoapods/p/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 
+Custom Speedometer but with negative reading as well.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+- Swift 4.2 and above
+- iOS 11 and above
+
+
 
 ## Installation
 
@@ -20,9 +26,46 @@ it, simply add the following line to your Podfile:
 pod 'TZSpeedometer'
 ```
 
+## Usage 
+Please check code in Example Project to see how you can customize the TZSpeedometer.
+
+For creating a new TZSpeedometer
+```swift
+let purpleMeter = TZSpeedometer(frame: CGRect(x: 0, y: 30, width: self.view.bounds.width, height:  height))
+purpleMeter.backgroundColor = .purple
+self.view.addSubview(purpleMeter))
+```
+
+You can also customize the UI of the TZSpeedometer using : `MeterAppearance`. Some of the examples are below
+```swift
+var apperance = MeterAppearance()
+apperance.indicators.positiveIndicatorColor = UIColor.orange
+apperance.indicators.baseGirth = 25
+apperance.indicators.indicatorGirth = 10
+apperance.readingText.gaugeBackgroundColor = UIColor.brown
+apperance.readingText.font = UIFont(name: "Menlo", size: 22)!
+apperance.markingsText.textColor = .black
+apperance.markingsText.font = UIFont(name: "Menlo", size: 11)!
+purpleMeter.appearance = apperance
+}
+```
+You can also customize the maximum and minimum reading of the meter and provide scale delta using `Meter`. 
+```swift
+let meter = Meter(maximumReading: 100, minimumReading: -80, scaleDelta: 30)
+purpleMeter.meter = meter
+```
+Also, keep in mind, to use the delta which will divide the meter marking in a way that maximum and minimum reading are visible on the meter. Make sure `(maximumReading - minimumReading) / scaleDelta` is Int.
+
+Simply Set the reading on the meter.
+```swift
+purpleMeter.reading = 50
+```
+
+
+
 ## Author
 
-tahseen0amin@gmail.com, tasin.amin@mcdermott.com
+Tasin Zarkoob, tahseen0amin@gmail.com
 
 ## License
 

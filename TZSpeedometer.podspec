@@ -8,17 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZSpeedometer'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Custom Speedometer but with negative reading as well.'
 
   s.description      = <<-DESC
-Custom Speedometer but with negative reading as well.
+TzSpeedometer lets you display the meter with both positive & negative readings. Highly customizable and easy to use.
                        DESC
 
   s.homepage         = 'https://github.com/tahseen0amin@gmail.com/TZSpeedometer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Tasin Zarkoob' => 'tasin.amin@mcdermott.com' }
+  s.author           = { 'Tasin Zarkoob' => 'tahseen0amin@gmail.com' }
   s.source           = { :git => 'https://github.com/tahseen0amin@gmail.com/TZSpeedometer.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/taseenamin'
 

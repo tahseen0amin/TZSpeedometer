@@ -7,22 +7,23 @@
 
 import UIKit
 
-class TZSpeedometer: UIView {
+open class TZSpeedometer: UIView {
     
     //MARK: - public variables
-    var appearance = MeterAppearance() {
+    public var appearance = MeterAppearance() {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    var meter = Meter() {
+    public var meter = Meter() {
         didSet {
-            self.setNeedsLayout()
+            print("Meter Changed to \(meter.minReading)")
+            self.setupMeterScale()
         }
     }
     
-    var reading : CGFloat = 0 {
+    public var reading : CGFloat = 0 {
         didSet {
             if (reading < CGFloat (meter.minReading)){
                 self.reading = CGFloat (meter.minReading)
@@ -46,17 +47,16 @@ class TZSpeedometer: UIView {
             self.setNeedsLayout()
         }
     }
-    private var zeroValueIndex: Int!
     private var zeroValueAngle: Double = Double.pi
     lazy private var meterCenter = CGPoint (x: self.frame.size.width / 2, y: self.frame.size.height )
     lazy private var meterRadius = self.frame.size.width / 2 - 50
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupMeterScale()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setupMeterScale()
     }
@@ -73,9 +73,6 @@ class TZSpeedometer: UIView {
         
         for index in 0...markingsCount {
             let value = meter.minReading + index * meter.delta
-            if value == 0 {
-                zeroValueIndex = index
-            }
             values.append("\(value)")
         }
         self.markingNames = values
@@ -99,7 +96,7 @@ class TZSpeedometer: UIView {
     }
     
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         // SETUP BASE SEMI CIRCULAR LAYER
@@ -113,10 +110,12 @@ class TZSpeedometer: UIView {
         self.layer.addSublayer(baseSemiCircleLayer)
         
         
-        if markingLabels.count > 0 && zeroValueIndex != nil {
+        if markingLabels.count > 0 {
             // find zero reading Angle
             let deltaAngle = Double.pi / Double(markingLabels.count - 1)
-            zeroValueAngle = Double.pi + (deltaAngle * Double(zeroValueIndex))
+            let zeroDeltaAngle = Double.pi / Double(meter.maxReading - meter.minReading)
+            let zeroIndex = Int(0 - meter.minReading)
+            zeroValueAngle = Double.pi + (zeroDeltaAngle * Double(zeroIndex))
             
             // Calculate Angles for Postive and Negative indicators
             let endAngle : CGFloat = CGFloat(Double.pi)
@@ -150,8 +149,8 @@ class TZSpeedometer: UIView {
                 let labelTextSize = label.text?.size(withAttributes: [NSAttributedString.Key.font: label.font!])
                 let theta = Double.pi + (deltaAngle * Double(index))
                 let meterWidth = appearance.indicators.baseGirth
-                let x = CGFloat ( Double(meterCenter.x) + Double(10.0 + meterRadius + meterWidth/2.0 ) * cos(theta) )
-                let y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius + meterWidth/2.0 ) * sin(theta))
+                let x = CGFloat ( Double(meterCenter.x) + Double(10.0 + meterRadius + meterWidth/1.3 ) * cos(theta) )
+                let y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius + meterWidth/1.3 ) * sin(theta))
                 label.frame = CGRect(x: x, y: y, width: (labelTextSize?.width)!, height: labelTextSize!.height)
                 if ((index == 0) || (index ==  (markingLabels.count-1))) {
                     label.center = CGPoint(x: x, y: y - 5.0)
@@ -170,7 +169,6 @@ class TZSpeedometer: UIView {
                     largeTextRadius = Int(largeTextSize.width) + 5
                 }
                 let largeTextSemiCircularPath = UIBezierPath(arcCenter: meterCenter, radius: CGFloat(largeTextRadius), startAngle: CGFloat(Double.pi), endAngle: CGFloat(Double.pi * 2), clockwise: true)
-                print(largeTextRadius)
                 
                 meterReadingSemiCircleLayer.path = largeTextSemiCircularPath.cgPath
                 meterReadingSemiCircleLayer.strokeColor = UIColor.clear.cgColor

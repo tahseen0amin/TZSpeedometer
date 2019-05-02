@@ -10,70 +10,77 @@ import UIKit
 //Mark: - Appearance structs
 
 /// Readings Text Appearance
-struct ReadingsTextAppearance {
+public struct ReadingsTextAppearance {
     /// default is System font with size 23
-    var font : UIFont = UIFont.systemFont(ofSize: 23)
+    public var font : UIFont = UIFont.systemFont(ofSize: 23)
     
     /// default is white
-    var textColor : UIColor = .white
+    public var textColor : UIColor = .white
     
     /// SemiCircular Gauge which will be the background of the readings Text
     /// Default is gray
-    var gaugeBackgroundColor : UIColor = .gray
+    public var gaugeBackgroundColor : UIColor = .gray
+    
+    public init() {}
 }
 
 /// Markings Text Appearance
-struct MarkingsTextAppearance {
+public struct MarkingsTextAppearance {
     /// Default is System Font with size 10
-    var font : UIFont = UIFont.systemFont(ofSize: 10)
+    public var font : UIFont = UIFont.systemFont(ofSize: 10)
     
     /// Default is white
-    var textColor : UIColor = .white
+    public var textColor : UIColor = .white
+    
+    public init() {}
 }
 
 /// Indicators Appearance
-struct IndicatorsAppearance {
+public struct IndicatorsAppearance {
     
     /// Default is gray
-    var baseIndicatorColor : UIColor = .gray
+    public var baseIndicatorColor : UIColor = .gray
     
     /// Default is green
-    var positiveIndicatorColor : UIColor = .green
+    public var positiveIndicatorColor : UIColor = .green
     
     /// Default is yellow
-    var negativeIndicatorColor : UIColor = .yellow
+    public var negativeIndicatorColor : UIColor = .yellow
     
     /// Default is 20.0
-    var baseGirth : CGFloat = 20.0
+    public var baseGirth : CGFloat = 20.0
     
     /// Default is 20.0
-    var indicatorGirth : CGFloat = 20.0
-}
-
-struct MeterAppearance {
-    var readingText  = ReadingsTextAppearance()
-    var markingsText = MarkingsTextAppearance()
-    var indicators = IndicatorsAppearance()
+    public var indicatorGirth : CGFloat = 20.0
     
-    var backgroundColor = UIColor.black
+    public init() {}
 }
 
-struct Meter {
+public struct MeterAppearance {
+    public var readingText  = ReadingsTextAppearance()
+    public var markingsText = MarkingsTextAppearance()
+    public var indicators = IndicatorsAppearance()
+    public init() {}
+}
+
+
+
+public struct Meter {
     /// Maximum Reading displayed by the meter
-    var maxReading = 100
+    public var maxReading = 100
     
      /// Minimum Reading displayed by the meter
-    var minReading = -100
+    public var minReading = -100
     
     /// Meter Scale Delta
-    var delta = 20
+    public var delta = 20
     
     // set true to hide the reading text on the bottom center of the meter
-    var isReadingTextHidden = false
+    public var isReadingTextHidden = false
     
-    init() {}
+    public init() {}
     
-    init(maximumReading: Int, minimumReading: Int, scaleDelta: Int){
+    public init(maximumReading: Int, minimumReading: Int, scaleDelta: Int){
         self.maxReading = maximumReading
         self.minReading = minimumReading
         self.delta = scaleDelta
