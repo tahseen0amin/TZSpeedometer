@@ -62,7 +62,7 @@ purpleMeter.reading = 50
 ```
 
 ## Screenshot
-[screenshot](https://github.com/tahseen0amin/TZSpeedometer/blob/master/TZSpeedometer.png)
+![screenshot](https://github.com/tahseen0amin/TZSpeedometer/blob/master/TZSpeedometer.png)
 
 
 ## Author
