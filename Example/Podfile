@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TZSpeedometer_Example' do
+  pod 'TZSpeedometer', :path => '../'
+
+  target 'TZSpeedometer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
