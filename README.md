@@ -61,6 +61,8 @@ Simply Set the reading on the meter.
 purpleMeter.reading = 50
 ```
 
+## Screenshot
+[screenshot](https://github.com/tahseen0amin/TZSpeedometer/blob/master/TZSpeedometer.png)
 
 
 ## Author
