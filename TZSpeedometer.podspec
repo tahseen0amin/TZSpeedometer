@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 TzSpeedometer lets you display the meter with both positive & negative readings. Highly customizable and easy to use.
                        DESC
 
-  s.homepage         = 'https://github.com/tahseen0amin@gmail.com/TZSpeedometer'
+  s.homepage         = 'https://github.com/tahseen0amin/TZSpeedometer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Tasin Zarkoob' => 'tahseen0amin@gmail.com' }
