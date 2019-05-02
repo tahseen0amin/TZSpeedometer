@@ -1,0 +1,6 @@
+framework module Pods_TZSpeedometer_Tests {
+  umbrella header "Pods-TZSpeedometer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

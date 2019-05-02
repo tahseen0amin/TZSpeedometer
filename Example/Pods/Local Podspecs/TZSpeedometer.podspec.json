@@ -1,0 +1,25 @@
+{
+  "name": "TZSpeedometer",
+  "version": "0.1.0",
+  "summary": "Custom Speedometer but with negative reading as well.",
+  "description": "Custom Speedometer but with negative reading as well.",
+  "homepage": "https://github.com/tahseen0amin@gmail.com/TZSpeedometer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Tasin Zarkoob": "tasin.amin@mcdermott.com"
+  },
+  "source": {
+    "git": "https://github.com/tahseen0amin@gmail.com/TZSpeedometer.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/taseenamin",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_version": "4.2",
+  "source_files": "TZSpeedometer/Classes/**/*",
+  "frameworks": "UIKit"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - TZSpeedometer (0.1.0)
+
+DEPENDENCIES:
+  - TZSpeedometer (from `../`)
+
+EXTERNAL SOURCES:
+  TZSpeedometer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TZSpeedometer: 211236f1280dcaeb1e37cc1bfeb0d0e6e541a4a2
+
+PODFILE CHECKSUM: 2432b40d8a88e1b143dcc80564490e5836e96912
+
+COCOAPODS: 1.6.1

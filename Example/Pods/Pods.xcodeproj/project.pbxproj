@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0413A6AD4B715740F10A9DA672480B4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		0CA72B7E43A1CF1FD2B9BFA53A49CD2A /* TZCustomHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF18B1D0749E7F3146C81FECFAB3EB99 /* TZCustomHelper.swift */; };
+		67BED088402761AC37E747EB58DBB45D /* Pods-TZSpeedometer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FFCB5E0D642A14F66258F35E8B5143 /* Pods-TZSpeedometer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D29B07B4B005BDE339E3C7461E1EC52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		6F44DE4B1E0207BF4F2A579D3DFC4373 /* TZSpeedometer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA225C16388B969F1408A3CA812E983 /* TZSpeedometer-dummy.m */; };
+		78815031967FF87E13F8C4A8F5EF5D4A /* Pods-TZSpeedometer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D838F58869913D2A4450C91B9A0DF4 /* Pods-TZSpeedometer_Example-dummy.m */; };
+		7E6C0E7530ED811B08D5B12207B7E2FE /* TZSpeedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B39266FDA85911B852FA9AAD3FA0414 /* TZSpeedometer.swift */; };
+		81EA991D85B566D1677A6FF81FF247F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */; };
+		901B25BEA7F28BFAB5F861BA3D4323E4 /* TZSpeedometer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBBFB0FE6349ACD91076B0B86195F04 /* TZSpeedometer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7AF5096DFF1B902EA3A69221334E39C /* Pods-TZSpeedometer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A9276C75BBD2EE1DB671B9C82B055B /* Pods-TZSpeedometer_Tests-dummy.m */; };
+		C8A73E50D15CCAAAEDE50FC34FCA70B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */; };
+		F728FAE6CEE0CEC0FA7FDBC2431CD887 /* Pods-TZSpeedometer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A747AD1DC4F2EF7CDF2122FE36FF60D4 /* Pods-TZSpeedometer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27B2E3B6547668661C4A0C24EEA3D42D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8359FE4070BB7D88EF253B6D52EFD663;
+			remoteInfo = TZSpeedometer;
+		};
+		CA253A1BD42936C2668A1EE62045B86F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C90BDE1BDAC40B296CEFDABDA7840796;
+			remoteInfo = "Pods-TZSpeedometer_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07A9276C75BBD2EE1DB671B9C82B055B /* Pods-TZSpeedometer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TZSpeedometer_Tests-dummy.m"; sourceTree = "<group>"; };
+		08F6280A8F934AC4A051ADB6CABF9C10 /* Pods_TZSpeedometer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TZSpeedometer_Tests.framework; path = "Pods-TZSpeedometer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2198A5F20728AB2F2E749489A078090B /* TZSpeedometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TZSpeedometer.framework; path = TZSpeedometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35498FCBAA831F891363904921AEBE3A /* Pods-TZSpeedometer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZSpeedometer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		45E6113C3B16F756DCD8442450CD5F8F /* Pods-TZSpeedometer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZSpeedometer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		481B5CC89E66842B16F4213C59F62DBB /* Pods-TZSpeedometer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZSpeedometer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5249508AD42E9C4AF61B9D3DD8811ECD /* TZSpeedometer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TZSpeedometer.modulemap; sourceTree = "<group>"; };
+		654F6ED5E91816BC3DDBFB28C1FA1342 /* Pods-TZSpeedometer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TZSpeedometer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		68F120E13C0B442887FCA3BB593E1D9D /* Pods-TZSpeedometer_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZSpeedometer_Tests-Info.plist"; sourceTree = "<group>"; };
+		6CA225C16388B969F1408A3CA812E983 /* TZSpeedometer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TZSpeedometer-dummy.m"; sourceTree = "<group>"; };
+		6E1CF1434200CAD177AFD5480FD6FD7E /* TZSpeedometer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TZSpeedometer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		72D838F58869913D2A4450C91B9A0DF4 /* Pods-TZSpeedometer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TZSpeedometer_Example-dummy.m"; sourceTree = "<group>"; };
+		7FB4E78E1FBD41A2B0FB548475106304 /* TZSpeedometer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZSpeedometer-prefix.pch"; sourceTree = "<group>"; };
+		83812B1EDBDA38C8BDE7088817D2A37C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		877C694E0CFF630C583B1929204FB518 /* TZSpeedometer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TZSpeedometer-Info.plist"; sourceTree = "<group>"; };
+		8B39266FDA85911B852FA9AAD3FA0414 /* TZSpeedometer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZSpeedometer.swift; path = TZSpeedometer/Classes/TZSpeedometer.swift; sourceTree = "<group>"; };
+		9699C0EFE34CCB2972FB3F8EC4BE75FD /* Pods_TZSpeedometer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TZSpeedometer_Example.framework; path = "Pods-TZSpeedometer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97921127FD45A2613140749D514CEEDF /* Pods-TZSpeedometer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TZSpeedometer_Tests.modulemap"; sourceTree = "<group>"; };
+		9B825B05214BCF91E049FC86C2F685A1 /* Pods-TZSpeedometer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZSpeedometer_Example-Info.plist"; sourceTree = "<group>"; };
+		9CBBFB0FE6349ACD91076B0B86195F04 /* TZSpeedometer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZSpeedometer-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A371A9CEDD74FE5FC0237478080B772F /* Pods-TZSpeedometer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZSpeedometer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A698E1773578FF11DE83998CDA24ABA9 /* Pods-TZSpeedometer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TZSpeedometer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A747AD1DC4F2EF7CDF2122FE36FF60D4 /* Pods-TZSpeedometer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TZSpeedometer_Example-umbrella.h"; sourceTree = "<group>"; };
+		B8243290C0FFF5D4BB527B6535F39C21 /* Pods-TZSpeedometer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TZSpeedometer_Example.modulemap"; sourceTree = "<group>"; };
+		BA2235C9074661EA019A1D3B64206185 /* Pods-TZSpeedometer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TZSpeedometer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CAC9BAF3050B8EEC14B6256876BAC34F /* TZSpeedometer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TZSpeedometer.xcconfig; sourceTree = "<group>"; };
+		CB769DE226EE6BC8693CD29031F86605 /* Pods-TZSpeedometer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZSpeedometer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CF18B1D0749E7F3146C81FECFAB3EB99 /* TZCustomHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TZCustomHelper.swift; path = TZSpeedometer/Classes/TZCustomHelper.swift; sourceTree = "<group>"; };
+		D6BF66022037183013C01C4D1E87434B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F4FFCB5E0D642A14F66258F35E8B5143 /* Pods-TZSpeedometer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TZSpeedometer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		F72F48322615523B7EB327DBE1010C60 /* Pods-TZSpeedometer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZSpeedometer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02342EA9B973134A46E645986172CF37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0413A6AD4B715740F10A9DA672480B4E /* Foundation.framework in Frameworks */,
+				81EA991D85B566D1677A6FF81FF247F6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5844B672EEBB492CB18BE13E3D06DF89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A73E50D15CCAAAEDE50FC34FCA70B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D1957AA55C3F9808AA6B8575E2B4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D29B07B4B005BDE339E3C7461E1EC52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E169A450ED27AC725DF52953F66D11E0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C57BE52B3D9D7D89F52C871B6D24A35 /* TZSpeedometer */ = {
+			isa = PBXGroup;
+			children = (
+				CF18B1D0749E7F3146C81FECFAB3EB99 /* TZCustomHelper.swift */,
+				8B39266FDA85911B852FA9AAD3FA0414 /* TZSpeedometer.swift */,
+				6CED6C8E97BBA4EE916F7417BBDDAEFB /* Pod */,
+				44EEA286880CAE1FF6490EB80FD8EFF7 /* Support Files */,
+			);
+			name = TZSpeedometer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4047B033EE53247117AF1351552F0A72 /* Pods-TZSpeedometer_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				97921127FD45A2613140749D514CEEDF /* Pods-TZSpeedometer_Tests.modulemap */,
+				BA2235C9074661EA019A1D3B64206185 /* Pods-TZSpeedometer_Tests-acknowledgements.markdown */,
+				45E6113C3B16F756DCD8442450CD5F8F /* Pods-TZSpeedometer_Tests-acknowledgements.plist */,
+				07A9276C75BBD2EE1DB671B9C82B055B /* Pods-TZSpeedometer_Tests-dummy.m */,
+				68F120E13C0B442887FCA3BB593E1D9D /* Pods-TZSpeedometer_Tests-Info.plist */,
+				F4FFCB5E0D642A14F66258F35E8B5143 /* Pods-TZSpeedometer_Tests-umbrella.h */,
+				F72F48322615523B7EB327DBE1010C60 /* Pods-TZSpeedometer_Tests.debug.xcconfig */,
+				35498FCBAA831F891363904921AEBE3A /* Pods-TZSpeedometer_Tests.release.xcconfig */,
+			);
+			name = "Pods-TZSpeedometer_Tests";
+			path = "Target Support Files/Pods-TZSpeedometer_Tests";
+			sourceTree = "<group>";
+		};
+		44EEA286880CAE1FF6490EB80FD8EFF7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5249508AD42E9C4AF61B9D3DD8811ECD /* TZSpeedometer.modulemap */,
+				CAC9BAF3050B8EEC14B6256876BAC34F /* TZSpeedometer.xcconfig */,
+				6CA225C16388B969F1408A3CA812E983 /* TZSpeedometer-dummy.m */,
+				877C694E0CFF630C583B1929204FB518 /* TZSpeedometer-Info.plist */,
+				7FB4E78E1FBD41A2B0FB548475106304 /* TZSpeedometer-prefix.pch */,
+				9CBBFB0FE6349ACD91076B0B86195F04 /* TZSpeedometer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TZSpeedometer";
+			sourceTree = "<group>";
+		};
+		6CED6C8E97BBA4EE916F7417BBDDAEFB /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				83812B1EDBDA38C8BDE7088817D2A37C /* LICENSE */,
+				D6BF66022037183013C01C4D1E87434B /* README.md */,
+				6E1CF1434200CAD177AFD5480FD6FD7E /* TZSpeedometer.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8DD73850104E55515B3705BEC7BBE593 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9699C0EFE34CCB2972FB3F8EC4BE75FD /* Pods_TZSpeedometer_Example.framework */,
+				08F6280A8F934AC4A051ADB6CABF9C10 /* Pods_TZSpeedometer_Tests.framework */,
+				2198A5F20728AB2F2E749489A078090B /* TZSpeedometer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B64C601F2C132B907A2BCA34A4F1BB48 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7271447AB660974BDD13D918E5B02 /* Pods-TZSpeedometer_Example */,
+				4047B033EE53247117AF1351552F0A72 /* Pods-TZSpeedometer_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CEA7271447AB660974BDD13D918E5B02 /* Pods-TZSpeedometer_Example */ = {
+			isa = PBXGroup;
+			children = (
+				B8243290C0FFF5D4BB527B6535F39C21 /* Pods-TZSpeedometer_Example.modulemap */,
+				A698E1773578FF11DE83998CDA24ABA9 /* Pods-TZSpeedometer_Example-acknowledgements.markdown */,
+				A371A9CEDD74FE5FC0237478080B772F /* Pods-TZSpeedometer_Example-acknowledgements.plist */,
+				72D838F58869913D2A4450C91B9A0DF4 /* Pods-TZSpeedometer_Example-dummy.m */,
+				654F6ED5E91816BC3DDBFB28C1FA1342 /* Pods-TZSpeedometer_Example-frameworks.sh */,
+				9B825B05214BCF91E049FC86C2F685A1 /* Pods-TZSpeedometer_Example-Info.plist */,
+				A747AD1DC4F2EF7CDF2122FE36FF60D4 /* Pods-TZSpeedometer_Example-umbrella.h */,
+				481B5CC89E66842B16F4213C59F62DBB /* Pods-TZSpeedometer_Example.debug.xcconfig */,
+				CB769DE226EE6BC8693CD29031F86605 /* Pods-TZSpeedometer_Example.release.xcconfig */,
+			);
+			name = "Pods-TZSpeedometer_Example";
+			path = "Target Support Files/Pods-TZSpeedometer_Example";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F2CCF26E49F7244F98ADC405B1E589BD /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				8DD73850104E55515B3705BEC7BBE593 /* Products */,
+				B64C601F2C132B907A2BCA34A4F1BB48 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E169A450ED27AC725DF52953F66D11E0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */,
+				ECF2A2B0720AE923C22BED3192888BE0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F2CCF26E49F7244F98ADC405B1E589BD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C57BE52B3D9D7D89F52C871B6D24A35 /* TZSpeedometer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0823D79A3522DF09249680585C64FAE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67BED088402761AC37E747EB58DBB45D /* Pods-TZSpeedometer_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354D738B986DBD29124E150D4CBCE007 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				901B25BEA7F28BFAB5F861BA3D4323E4 /* TZSpeedometer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91D36413082B87A14CE9A1D591022B20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F728FAE6CEE0CEC0FA7FDBC2431CD887 /* Pods-TZSpeedometer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8359FE4070BB7D88EF253B6D52EFD663 /* TZSpeedometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D3E0429BBEF6D6F70E596B3AF1A7EC9 /* Build configuration list for PBXNativeTarget "TZSpeedometer" */;
+			buildPhases = (
+				354D738B986DBD29124E150D4CBCE007 /* Headers */,
+				641ADEC14FA78AFEABE0AD8B900DCB43 /* Sources */,
+				02342EA9B973134A46E645986172CF37 /* Frameworks */,
+				07F2C156A592DC7596FCEB5788CD12F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TZSpeedometer;
+			productName = TZSpeedometer;
+			productReference = 2198A5F20728AB2F2E749489A078090B /* TZSpeedometer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C90BDE1BDAC40B296CEFDABDA7840796 /* Pods-TZSpeedometer_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837E9D7630B2C87DFB13471544006517 /* Build configuration list for PBXNativeTarget "Pods-TZSpeedometer_Example" */;
+			buildPhases = (
+				91D36413082B87A14CE9A1D591022B20 /* Headers */,
+				53F08D6B74BABA4480CE1B6D1130C507 /* Sources */,
+				C5D1957AA55C3F9808AA6B8575E2B4A1 /* Frameworks */,
+				C19F09A3D62832437BECBD1229877F02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DABB2416B39C42565924D1F0CA387369 /* PBXTargetDependency */,
+			);
+			name = "Pods-TZSpeedometer_Example";
+			productName = "Pods-TZSpeedometer_Example";
+			productReference = 9699C0EFE34CCB2972FB3F8EC4BE75FD /* Pods_TZSpeedometer_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D9863B7979641D80AFD6AC2CC7583557 /* Pods-TZSpeedometer_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E54C5913F986ABF753DFED4B36699E65 /* Build configuration list for PBXNativeTarget "Pods-TZSpeedometer_Tests" */;
+			buildPhases = (
+				0823D79A3522DF09249680585C64FAE2 /* Headers */,
+				90AFD55F333E068ABD43F0D961FF24E4 /* Sources */,
+				5844B672EEBB492CB18BE13E3D06DF89 /* Frameworks */,
+				0639D49A9AF9A69C63201BC5A9F42807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				682E814885A815DA79CCB472CBA05A32 /* PBXTargetDependency */,
+			);
+			name = "Pods-TZSpeedometer_Tests";
+			productName = "Pods-TZSpeedometer_Tests";
+			productReference = 08F6280A8F934AC4A051ADB6CABF9C10 /* Pods_TZSpeedometer_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 8DD73850104E55515B3705BEC7BBE593 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C90BDE1BDAC40B296CEFDABDA7840796 /* Pods-TZSpeedometer_Example */,
+				D9863B7979641D80AFD6AC2CC7583557 /* Pods-TZSpeedometer_Tests */,
+				8359FE4070BB7D88EF253B6D52EFD663 /* TZSpeedometer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0639D49A9AF9A69C63201BC5A9F42807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F2C156A592DC7596FCEB5788CD12F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19F09A3D62832437BECBD1229877F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53F08D6B74BABA4480CE1B6D1130C507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78815031967FF87E13F8C4A8F5EF5D4A /* Pods-TZSpeedometer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641ADEC14FA78AFEABE0AD8B900DCB43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CA72B7E43A1CF1FD2B9BFA53A49CD2A /* TZCustomHelper.swift in Sources */,
+				6F44DE4B1E0207BF4F2A579D3DFC4373 /* TZSpeedometer-dummy.m in Sources */,
+				7E6C0E7530ED811B08D5B12207B7E2FE /* TZSpeedometer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90AFD55F333E068ABD43F0D961FF24E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7AF5096DFF1B902EA3A69221334E39C /* Pods-TZSpeedometer_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		682E814885A815DA79CCB472CBA05A32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TZSpeedometer_Example";
+			target = C90BDE1BDAC40B296CEFDABDA7840796 /* Pods-TZSpeedometer_Example */;
+			targetProxy = CA253A1BD42936C2668A1EE62045B86F /* PBXContainerItemProxy */;
+		};
+		DABB2416B39C42565924D1F0CA387369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TZSpeedometer;
+			target = 8359FE4070BB7D88EF253B6D52EFD663 /* TZSpeedometer */;
+			targetProxy = 27B2E3B6547668661C4A0C24EEA3D42D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0857BFD866D839414CCDE3B0A18528AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35498FCBAA831F891363904921AEBE3A /* Pods-TZSpeedometer_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TZSpeedometer_Tests/Pods-TZSpeedometer_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TZSpeedometer_Tests/Pods-TZSpeedometer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		37288A596E22AEA3B322AF10669BE4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72F48322615523B7EB327DBE1010C60 /* Pods-TZSpeedometer_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TZSpeedometer_Tests/Pods-TZSpeedometer_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TZSpeedometer_Tests/Pods-TZSpeedometer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4CADC895E8B175D057511F403395F73D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB769DE226EE6BC8693CD29031F86605 /* Pods-TZSpeedometer_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TZSpeedometer_Example/Pods-TZSpeedometer_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TZSpeedometer_Example/Pods-TZSpeedometer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8B71F56825006BDA0C09DE27291C2C7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAC9BAF3050B8EEC14B6256876BAC34F /* TZSpeedometer.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TZSpeedometer/TZSpeedometer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TZSpeedometer/TZSpeedometer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TZSpeedometer/TZSpeedometer.modulemap";
+				PRODUCT_MODULE_NAME = TZSpeedometer;
+				PRODUCT_NAME = TZSpeedometer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		936C6613A35F5E44057C739FA5E14894 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481B5CC89E66842B16F4213C59F62DBB /* Pods-TZSpeedometer_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TZSpeedometer_Example/Pods-TZSpeedometer_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TZSpeedometer_Example/Pods-TZSpeedometer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B79DC34366D2EAB77E57FF173D51FEBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAC9BAF3050B8EEC14B6256876BAC34F /* TZSpeedometer.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TZSpeedometer/TZSpeedometer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TZSpeedometer/TZSpeedometer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TZSpeedometer/TZSpeedometer.modulemap";
+				PRODUCT_MODULE_NAME = TZSpeedometer;
+				PRODUCT_NAME = TZSpeedometer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFA1578582149B7E24AD55CBA30F07A /* Debug */,
+				4CE281642D6EE9FAB113046B4B6328A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D3E0429BBEF6D6F70E596B3AF1A7EC9 /* Build configuration list for PBXNativeTarget "TZSpeedometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B71F56825006BDA0C09DE27291C2C7A /* Debug */,
+				B79DC34366D2EAB77E57FF173D51FEBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837E9D7630B2C87DFB13471544006517 /* Build configuration list for PBXNativeTarget "Pods-TZSpeedometer_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				936C6613A35F5E44057C739FA5E14894 /* Debug */,
+				4CADC895E8B175D057511F403395F73D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E54C5913F986ABF753DFED4B36699E65 /* Build configuration list for PBXNativeTarget "Pods-TZSpeedometer_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37288A596E22AEA3B322AF10669BE4FF /* Debug */,
+				0857BFD866D839414CCDE3B0A18528AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

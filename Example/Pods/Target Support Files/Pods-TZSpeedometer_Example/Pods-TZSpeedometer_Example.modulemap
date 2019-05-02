@@ -1,0 +1,6 @@
+framework module Pods_TZSpeedometer_Example {
+  umbrella header "Pods-TZSpeedometer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

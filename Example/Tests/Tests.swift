@@ -1,5 +1,4 @@
 import XCTest
-import TZSpeedometer
 
 class Tests: XCTestCase {
     

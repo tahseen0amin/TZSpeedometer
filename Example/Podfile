@@ -6,6 +6,5 @@ target 'TZSpeedometer_Example' do
   target 'TZSpeedometer_Tests' do
     inherit! :search_paths
 
-    
   end
 end

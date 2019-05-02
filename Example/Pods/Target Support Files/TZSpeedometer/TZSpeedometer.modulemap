@@ -1,0 +1,6 @@
+framework module TZSpeedometer {
+  umbrella header "TZSpeedometer-umbrella.h"
+
+  export *
+  module * { export * }
+}
