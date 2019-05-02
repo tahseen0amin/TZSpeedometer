@@ -72,3 +72,6 @@ Tasin Zarkoob, tahseen0amin@gmail.com
 ## License
 
 TZSpeedometer is available under the MIT license. See the LICENSE file for more info.
+
+## Thanks
+Thanks to Ankit Sachan whose code in SemiCircular-Scale was helpful.
