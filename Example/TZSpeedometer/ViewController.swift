@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         
         // with different appearance
         let greenMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 1) + 30, width: self.view.bounds.width, height:  height))
-        greenMeter.backgroundColor = .purple
+        greenMeter.backgroundColor = .white
         var apperance = MeterAppearance()
         apperance.indicators.positiveIndicatorColor = UIColor.orange
         apperance.indicators.baseGirth = 25

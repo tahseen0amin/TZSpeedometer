@@ -1,11 +1,11 @@
 # TZSpeedometer
 
-[![CI Status](https://img.shields.io/travis/tahseen0amin@gmail.com/TZSpeedometer.svg?style=flat)](https://travis-ci.org/tahseen0amin@gmail.com/TZSpeedometer)
+<!--[![CI Status](https://img.shields.io/travis/tahseen0amin@gmail.com/TZSpeedometer.svg?style=flat)](https://travis-ci.org/tahseen0amin@gmail.com/TZSpeedometer)-->
 [![Version](https://img.shields.io/cocoapods/v/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 [![License](https://img.shields.io/cocoapods/l/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 [![Platform](https://img.shields.io/cocoapods/p/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 
-Custom Speedometer but with negative reading as well.
+TZSpeedometer lets you display the meter with both positive & negative readings. Highly customizable and easy to use.
 
 ## Example
 
@@ -14,7 +14,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 - Swift 4.2 and above
 - iOS 11 and above
-
 
 
 ## Installation
