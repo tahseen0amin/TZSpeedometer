@@ -25,6 +25,12 @@ it, simply add the following line to your Podfile:
 pod 'TZSpeedometer'
 ```
 
+For Carthage, Add this to Cartfile
+```ruby
+github "tahseen0amin/TZSpeedometer"
+```
+
+
 ## Usage 
 Please check code in Example Project to see how you can customize the TZSpeedometer.
 
