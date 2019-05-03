@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         // default
         let redMeter = TZSpeedometer(frame: CGRect(x: 0, y: 30, width: self.view.bounds.width, height:  height))
-        redMeter.backgroundColor = .red
-        redMeter.reading = -60
+        redMeter.backgroundColor = UIColor(red:0.23, green:0.35, blue:0.60, alpha:1.0)
+        redMeter.reading = 70
         self.view.addSubview(redMeter)
         
         // with different appearance
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         apperance.markingsText.textColor = .black
         apperance.markingsText.font = UIFont(name: "Menlo", size: 11)!
         greenMeter.appearance = apperance
-        greenMeter.reading = 50
+        greenMeter.reading = 24
         self.view.addSubview(greenMeter)
         
         // with different readings
@@ -54,8 +54,30 @@ class ViewController: UIViewController {
         var meter2 = Meter(maximumReading: 100, minimumReading: 0, scaleDelta: 15)
         meter2.isReadingTextHidden = true
         yelloMeter.meter = meter2
-        yelloMeter.reading = 44
+        yelloMeter.reading = 5
         self.view.addSubview(yelloMeter)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
+            redMeter.reading = -10
+            yelloMeter.reading = 30
+            greenMeter.reading = 80
+            blueMeter.reading = 2
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
+                redMeter.reading = 30
+                yelloMeter.reading = 90
+                greenMeter.reading = -10
+                blueMeter.reading = -50
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
+                    redMeter.reading = 70
+                    yelloMeter.reading = 75
+                    greenMeter.reading = -53
+                    blueMeter.reading = 95
+                }
+                
+            }
+        }
         
     }
 

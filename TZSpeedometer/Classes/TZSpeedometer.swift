@@ -193,6 +193,8 @@ open class TZSpeedometer: UIView {
     }
     
     private func showReading(){
+        
+        
         if !meter.isReadingTextHidden {
             meterReadingLargeText.text = "\(Int(reading))"
         }
@@ -207,11 +209,13 @@ open class TZSpeedometer: UIView {
             //positive indicator
             strokeToPut = Double(reading - CGFloat(0))/Double(meter.maxReading - 0)
             positiveIndicatorLayer.strokeEnd = CGFloat(strokeToPut)
+            negativeIndicatorLayer.strokeEnd = 0
         } else {
             strokeToPut = zeroStrokeOnBaseLayer - x
             strokeToPut = fabs(1 + Double(reading + CGFloat(meter.minReading))/Double(0 - meter.minReading))
             // negative indicator
             negativeIndicatorLayer.strokeEnd = CGFloat(strokeToPut)
+            positiveIndicatorLayer.strokeEnd = 0
         }
         
     }
