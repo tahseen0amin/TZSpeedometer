@@ -41,6 +41,7 @@ open class TZSpeedometer: UIView {
     private let baseSemiCircleLayer = CAShapeLayer()
     private let meterReadingSemiCircleLayer = CAShapeLayer()
     private let meterReadingLargeText = UILabel(frame: .zero)
+    private let readingUnitLabel = UILabel(frame: .zero)
     private var markingNames : [String] = []
     private var markingLabels: [UILabel] = [] {
         didSet {
@@ -50,6 +51,7 @@ open class TZSpeedometer: UIView {
     private var zeroValueAngle: Double = Double.pi
     lazy private var meterCenter = CGPoint (x: self.frame.size.width / 2, y: self.frame.size.height )
     lazy private var meterRadius = self.frame.size.width / 2 - 50
+    
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -107,7 +109,10 @@ open class TZSpeedometer: UIView {
         baseSemiCircleLayer.lineWidth = appearance.indicators.baseGirth
         baseSemiCircleLayer.strokeStart = 0
         baseSemiCircleLayer.strokeEnd  = 1
-        self.layer.addSublayer(baseSemiCircleLayer)
+        if baseSemiCircleLayer.superlayer == nil {
+            self.layer.addSublayer(baseSemiCircleLayer)
+        }
+        
         
         
         if markingLabels.count > 0 {
@@ -130,7 +135,10 @@ open class TZSpeedometer: UIView {
             positiveIndicatorLayer.lineWidth = appearance.indicators.indicatorGirth
             positiveIndicatorLayer.strokeStart = 0
             positiveIndicatorLayer.strokeEnd  = 0
-            self.layer.addSublayer(positiveIndicatorLayer)
+            if positiveIndicatorLayer.superlayer == nil {
+                self.layer.addSublayer(positiveIndicatorLayer)
+            }
+            
             
             let negativeCirclePath = UIBezierPath(arcCenter: meterCenter, radius: meterRadius, startAngle: startAnglePositive, endAngle: endAngle, clockwise: false)
             negativeIndicatorLayer.path = negativeCirclePath.cgPath
@@ -139,7 +147,10 @@ open class TZSpeedometer: UIView {
             negativeIndicatorLayer.lineWidth = appearance.indicators.indicatorGirth
             negativeIndicatorLayer.strokeStart = 0
             negativeIndicatorLayer.strokeEnd  = 0
-            self.layer.addSublayer(negativeIndicatorLayer)
+            if negativeIndicatorLayer.superlayer == nil {
+                self.layer.addSublayer(negativeIndicatorLayer)
+            }
+            
             
             
             for index in 0..<markingLabels.count {
@@ -149,15 +160,24 @@ open class TZSpeedometer: UIView {
                 let labelTextSize = label.text?.size(withAttributes: [NSAttributedString.Key.font: label.font!])
                 let theta = Double.pi + (deltaAngle * Double(index))
                 let meterWidth = appearance.indicators.baseGirth
-                let x = CGFloat ( Double(meterCenter.x) + Double(10.0 + meterRadius + meterWidth/1.3 ) * cos(theta) )
-                let y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius + meterWidth/1.3 ) * sin(theta))
+                
+                var x = CGFloat (Double(meterCenter.x) + Double(10.0 + meterRadius - meterWidth/0.6 ) * cos(theta))
+                var y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius - meterWidth/0.6 ) * sin(theta))
+                
+                if meter.isMarkingsInside == false {
+                    x = CGFloat (Double(meterCenter.x) + Double(10.0 + meterRadius + meterWidth/1.3 ) * cos(theta))
+                    y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius + meterWidth/1.3 ) * sin(theta))
+                }
+                
                 label.frame = CGRect(x: x, y: y, width: (labelTextSize?.width)!, height: labelTextSize!.height)
                 if ((index == 0) || (index ==  (markingLabels.count-1))) {
                     label.center = CGPoint(x: x, y: y - 5.0)
-                }else{
+                } else {
                     label.center = CGPoint(x: x, y: y)
                 }
-                self.addSubview(label)
+                if label.superview == nil {
+                    self.addSubview(label)
+                }
                 self.bringSubviewToFront(label)
             }
             
@@ -176,7 +196,10 @@ open class TZSpeedometer: UIView {
                 meterReadingSemiCircleLayer.lineWidth = 0
                 meterReadingSemiCircleLayer.strokeStart = 0
                 meterReadingSemiCircleLayer.strokeEnd  = 1
-                self.layer.addSublayer(meterReadingSemiCircleLayer)
+                if meterReadingSemiCircleLayer.superlayer == nil {
+                    self.layer.addSublayer(meterReadingSemiCircleLayer)
+                }
+                
                 
                 meterReadingLargeText.removeFromSuperview()
                 let largeTextCenter = CGPoint(x: meterCenter.x, y: meterCenter.y - largeTextSize.height/2)
@@ -184,10 +207,28 @@ open class TZSpeedometer: UIView {
                 meterReadingLargeText.textColor = appearance.readingText.textColor
                 meterReadingLargeText.font = appearance.readingText.font
                 meterReadingLargeText.textAlignment = .center
-                self.addSubview(meterReadingLargeText)
+                if meterReadingLargeText.superview == nil {
+                    self.addSubview(meterReadingLargeText)
+                }
+                
                 meterReadingLargeText.center = largeTextCenter
                 meterReadingLargeText.text = "0"
             }
+            
+            // Reading Unit Text Label
+            readingUnitLabel.font = appearance.unitText.font
+            let unitSize = meter.unitText.size(withAttributes: [NSAttributedString.Key.font : readingUnitLabel.font!])
+            readingUnitLabel.textColor = appearance.unitText.textColor
+            readingUnitLabel.text = meter.unitText
+            readingUnitLabel.textAlignment = .center
+            let meterWidth = appearance.indicators.baseGirth > appearance.indicators.indicatorGirth ? appearance.indicators.baseGirth : appearance.indicators.indicatorGirth
+            let y = CGFloat(Double(meterCenter.y) - Double(10.0 + meterRadius - meterWidth/0.3 ) * sin(Double.pi / 2))
+            readingUnitLabel.frame = CGRect(origin: .zero, size: unitSize)
+            readingUnitLabel.center = CGPoint(x: meterCenter.x, y: y)
+            if readingUnitLabel.superview == nil {
+                self.addSubview(readingUnitLabel)
+            }
+            
             showReading()
         }
     }

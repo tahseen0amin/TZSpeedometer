@@ -24,6 +24,17 @@ public struct ReadingsTextAppearance {
     public init() {}
 }
 
+/// Reading Unit Appearance
+public struct UnitTextAppearance {
+    /// default is System font with size 12
+    public var font : UIFont = UIFont.systemFont(ofSize: 12)
+    
+    /// default is white
+    public var textColor : UIColor = .white
+    
+    public init() {}
+}
+
 /// Markings Text Appearance
 public struct MarkingsTextAppearance {
     /// Default is System Font with size 10
@@ -60,6 +71,7 @@ public struct MeterAppearance {
     public var readingText  = ReadingsTextAppearance()
     public var markingsText = MarkingsTextAppearance()
     public var indicators = IndicatorsAppearance()
+    public var unitText = UnitTextAppearance()
     public init() {}
 }
 
@@ -75,14 +87,20 @@ public struct Meter {
     /// Meter Scale Delta
     public var delta = 20
     
+    /// Meter Scale Unit Text
+    public var unitText = "km/hr"
+    
     // set true to hide the reading text on the bottom center of the meter
     public var isReadingTextHidden = false
     
+    /// set false to show marking outside, Default is true
+    public var isMarkingsInside = true
+    
     public init() {}
     
-    public init(maximumReading: Int, minimumReading: Int, scaleDelta: Int){
+    public init(minimumReading: Int, maximumReading: Int, unitText: String){
         self.maxReading = maximumReading
         self.minReading = minimumReading
-        self.delta = scaleDelta
+        self.unitText = unitText
     }
 }

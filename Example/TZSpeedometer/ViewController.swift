@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         let blueMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 2) + 30, width: self.view.bounds.width, height:  height))
         self.view.addSubview(blueMeter)
         blueMeter.backgroundColor = .black
-        let meter = Meter(maximumReading: 100, minimumReading: -80, scaleDelta: 30)
+        let meter = Meter(minimumReading: -80, maximumReading: 100, unitText: "km/hr")
         blueMeter.meter = meter
         blueMeter.reading = 38
         
@@ -51,7 +51,8 @@ class ViewController: UIViewController {
         // only positive readings and without readings
         let yelloMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 3) + 30, width: self.view.bounds.width, height:  height))
         yelloMeter.backgroundColor = .darkGray
-        var meter2 = Meter(maximumReading: 100, minimumReading: 0, scaleDelta: 15)
+        var meter2 = Meter(minimumReading: 0, maximumReading: 100, unitText: "km/hr")
+        meter2.isMarkingsInside = false
         meter2.isReadingTextHidden = true
         yelloMeter.meter = meter2
         yelloMeter.reading = 5
