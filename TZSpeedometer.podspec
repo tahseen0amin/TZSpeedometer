@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'TZSpeedometer'
-  s.version          = '1.0.4'
-  s.summary          = 'Custom Speedometer but with negative reading as well.'
+  s.version          = '1.0.8'
+  s.summary          = 'Custom Speedometer but with negative reading as well plus markings can be shown outside'
 
   s.description      = <<-DESC
-TZSpeedometer lets you display the meter with both positive & negative readings. Highly customizable and easy to use.
+TZSpeedometer lets you display the meter with both positive & negative readings. It also supports marking to be shown inside or outside the gauge/meter. Highly customizable and easy to use.
                        DESC
 
   s.homepage         = 'https://github.com/tahseen0amin/TZSpeedometer'

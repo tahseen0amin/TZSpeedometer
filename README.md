@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 [![Platform](https://img.shields.io/cocoapods/p/TZSpeedometer.svg?style=flat)](https://cocoapods.org/pods/TZSpeedometer)
 
-TZSpeedometer lets you display the meter with both positive & negative readings. Highly customizable and easy to use.
+TZSpeedometer lets you display the meter with both positive & negative readings. It also supports marking to be shown inside or outside the gauge/meter. Highly customizable and easy to use.
 
 ## Example
 
@@ -68,6 +68,7 @@ purpleMeter.reading = 50
 
 ## Screenshot
 ![screenshot](https://github.com/tahseen0amin/TZSpeedometer/blob/master/TZSpeedometer.png)
+![screenshot](https://github.com/tahseen0amin/TZSpeedometer/blob/master/TZSpeedometer2.png)
 
 
 ## Author
