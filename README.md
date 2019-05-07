@@ -56,10 +56,13 @@ purpleMeter.appearance = apperance
 ```
 You can also customize the maximum and minimum reading of the meter and provide scale delta using `Meter`. 
 ```swift
-let meter = Meter(maximumReading: 100, minimumReading: -80, scaleDelta: 30)
+let meter = Meter(minimumReading: -80, maximumReading: 100, unitText: "km/hr")
+meter.scaleDelta = 10
 purpleMeter.meter = meter
 ```
-Also, keep in mind, to use the delta which will divide the meter marking in a way that maximum and minimum reading are visible on the meter. Make sure `(maximumReading - minimumReading) / scaleDelta` is Int.
+Also, keep in mind, to use the delta which will divide the meter marking in a way that maximum and minimum reading are visible on the meter. Make sure `(maximumReading - minimumReading) / scaleDelta` is Int. 
+
+(NOTE: unit Text label is not shown in the screenshot below. please check Example project for more options.)
 
 Simply Set the reading on the meter.
 ```swift
