@@ -59,10 +59,10 @@ public struct IndicatorsAppearance {
     public var negativeIndicatorColor : UIColor = .yellow
     
     /// Default is 20.0
-    public var baseGirth : CGFloat = 20.0
+    public var baseGirth : CGFloat = 5.0
     
     /// Default is 20.0
-    public var indicatorGirth : CGFloat = 20.0
+    public var indicatorGirth : CGFloat = 5.0
     
     public init() {}
 }

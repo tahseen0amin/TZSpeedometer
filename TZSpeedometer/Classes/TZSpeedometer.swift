@@ -50,7 +50,7 @@ open class TZSpeedometer: UIView {
     }
     private var zeroValueAngle: Double = Double.pi
     lazy private var meterCenter = CGPoint (x: self.frame.size.width / 2, y: self.frame.size.height )
-    lazy private var meterRadius = self.frame.size.width / 2 - 50
+    lazy private var meterRadius = self.frame.size.width / 2 - 10
     
     
     required public init?(coder aDecoder: NSCoder) {
@@ -100,6 +100,10 @@ open class TZSpeedometer: UIView {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
+        
+        if meter.isMarkingsInside == false {
+            meterRadius = meterRadius - 40
+        }
         
         // SETUP BASE SEMI CIRCULAR LAYER
         let circlePath = UIBezierPath(arcCenter: meterCenter, radius: meterRadius, startAngle: CGFloat(Double.pi), endAngle: CGFloat(Double.pi * 2), clockwise: true)
@@ -152,14 +156,14 @@ open class TZSpeedometer: UIView {
             }
             
             
-            
             for index in 0..<markingLabels.count {
                 let label = markingLabels[index]
                 label.font = appearance.markingsText.font
                 label.textColor = appearance.markingsText.textColor
                 let labelTextSize = label.text?.size(withAttributes: [NSAttributedString.Key.font: label.font!])
                 let theta = Double.pi + (deltaAngle * Double(index))
-                let meterWidth = appearance.indicators.baseGirth
+                var meterWidth = max(appearance.indicators.baseGirth, appearance.indicators.indicatorGirth)
+                meterWidth = appearance.indicators.baseGirth < 20 ? 20 : appearance.indicators.baseGirth
                 
                 var x = CGFloat (Double(meterCenter.x) + Double(10.0 + meterRadius - meterWidth/0.6 ) * cos(theta))
                 var y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius - meterWidth/0.6 ) * sin(theta))
@@ -182,8 +186,8 @@ open class TZSpeedometer: UIView {
             }
             
             // Large Text Layout
+            var largeTextRadius = Int(meterRadius / 4)
             if !meter.isReadingTextHidden && markingNames.count > 0 {
-                var largeTextRadius = Int(meterRadius / 4)
                 let largeTextSize = markingNames.last!.size(withAttributes: [NSAttributedString.Key.font : appearance.readingText.font])
                 if largeTextRadius < Int(largeTextSize.width) {
                     largeTextRadius = Int(largeTextSize.width) + 5
@@ -221,8 +225,11 @@ open class TZSpeedometer: UIView {
             readingUnitLabel.textColor = appearance.unitText.textColor
             readingUnitLabel.text = meter.unitText
             readingUnitLabel.textAlignment = .center
-            let meterWidth = appearance.indicators.baseGirth > appearance.indicators.indicatorGirth ? appearance.indicators.baseGirth : appearance.indicators.indicatorGirth
-            let y = CGFloat(Double(meterCenter.y) - Double(10.0 + meterRadius - meterWidth/0.3 ) * sin(Double.pi / 2))
+            var meterWidth = max(appearance.indicators.baseGirth, appearance.indicators.indicatorGirth)
+            meterWidth = appearance.indicators.baseGirth < 20 ? 20 : appearance.indicators.baseGirth
+            var y = CGFloat (Double(meterCenter.y) + Double(10.0 + meterRadius - meterWidth/0.6 ) * sin(Double.pi * 1.5))
+            
+            y = y + unitSize.height + 5
             readingUnitLabel.frame = CGRect(origin: .zero, size: unitSize)
             readingUnitLabel.center = CGPoint(x: meterCenter.x, y: y)
             if readingUnitLabel.superview == nil {

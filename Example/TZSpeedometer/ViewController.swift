@@ -29,27 +29,19 @@ class ViewController: UIViewController {
         greenMeter.backgroundColor = .white
         var apperance = MeterAppearance()
         apperance.indicators.positiveIndicatorColor = UIColor.orange
-        apperance.indicators.baseGirth = 25
+        apperance.indicators.baseGirth = 15
         apperance.indicators.indicatorGirth = 10
         apperance.readingText.gaugeBackgroundColor = UIColor.brown
         apperance.readingText.font = UIFont(name: "Menlo", size: 22)!
         apperance.markingsText.textColor = .black
         apperance.markingsText.font = UIFont(name: "Menlo", size: 11)!
+        apperance.unitText.textColor = .black
         greenMeter.appearance = apperance
         greenMeter.reading = 24
         self.view.addSubview(greenMeter)
         
-        // with different readings
-        let blueMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 2) + 30, width: self.view.bounds.width, height:  height))
-        self.view.addSubview(blueMeter)
-        blueMeter.backgroundColor = .black
-        let meter = Meter(minimumReading: -80, maximumReading: 100, unitText: "km/hr")
-        blueMeter.meter = meter
-        blueMeter.reading = 38
-        
-        
         // only positive readings and without readings
-        let yelloMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 3) + 30, width: self.view.bounds.width, height:  height))
+        let yelloMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 2) + 30, width: self.view.bounds.width, height:  height))
         yelloMeter.backgroundColor = .darkGray
         var meter2 = Meter(minimumReading: 0, maximumReading: 100, unitText: "km/hr")
         meter2.isMarkingsInside = false
@@ -57,6 +49,14 @@ class ViewController: UIViewController {
         yelloMeter.meter = meter2
         yelloMeter.reading = 5
         self.view.addSubview(yelloMeter)
+        
+        // with different readings
+        let blueMeter = TZSpeedometer(frame: CGRect(x: 0, y: (height * 3) + 30, width: self.view.bounds.width, height:  height))
+        self.view.addSubview(blueMeter)
+        blueMeter.backgroundColor = .black
+        let meter = Meter(minimumReading: -80, maximumReading: 100, unitText: "km/hr")
+        blueMeter.meter = meter
+        blueMeter.reading = 38
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
             redMeter.reading = -10
@@ -79,6 +79,8 @@ class ViewController: UIViewController {
                 
             }
         }
+        
+        
         
     }
 

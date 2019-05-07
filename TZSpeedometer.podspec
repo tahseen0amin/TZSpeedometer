@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TZSpeedometer'
-  s.version          = '1.0.8'
+  s.version          = '1.0.9'
   s.summary          = 'Custom Speedometer but with negative reading as well plus markings can be shown outside'
 
   s.description      = <<-DESC
